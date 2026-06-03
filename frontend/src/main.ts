@@ -1,61 +1,104 @@
-import './style.scss'
-import './style.css'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.ts'
+import './style/style.scss'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${typescriptLogo}" class="framework" alt="TypeScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
+  <main>
 
-<div class="ticks"></div>
+    <nav>
+      <a href="#hero">Hero</a>
+      <a href="#about">About</a>
+      <a href="#work">How I work</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://www.typescriptlang.org" target="_blank">
-          <img class="button-icon" src="${typescriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
+    <section id="hero" class="hero">
+      <div class="container">
+        <h1>Fullstack JavaScript Developer</h1>
+        <p>Frontend, Backend, API Integrations, AI Tools</p>
+      </div>
+    </section>
 
-<div class="ticks"></div>
-<section id="spacer"></section>
-`
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About</h2>
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+        <p>
+          JavaScript / TypeScript developer.
+          Interested in frontend, backend and AI integrations.
+        </p>
+
+        <ul>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>SCSS</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <div class="container">
+        <h2>How I Work</h2>
+
+        <ol>
+          <li>Task analysis</li>
+          <li>Planning</li>
+          <li>Development</li>
+          <li>Testing</li>
+          <li>Refactoring</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+          <h3>Crudlog</h3>
+          <p>Fullstack CRUD application</p>
+        </div>
+
+        <div class="project-card">
+          <h3>AskAI</h3>
+          <p>AI integration experiments</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact</h2>
+
+        <form>
+
+          <input
+            type="text"
+            placeholder="Name"
+          >
+
+          <input
+            type="email"
+            placeholder="Email"
+          >
+
+          <input
+            type="tel"
+            placeholder="Phone"
+          >
+
+          <textarea
+            placeholder="Comment"
+          ></textarea>
+
+          <button type="submit">
+            Send
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+  `
