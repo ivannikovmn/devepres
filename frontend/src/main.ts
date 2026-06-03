@@ -1,4 +1,5 @@
-import './style/style.scss'
+import { renderContactForm } from "./components/contactForm"
+import "./style/style.scss"
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main>
@@ -23,16 +24,17 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <h2>About</h2>
 
         <p>
-          JavaScript / TypeScript developer.
-          Interested in frontend, backend and AI integrations.
+          I build web applications and work with frontend interfaces,
+          API integrations and backend logic.
+          I’m interested in practical use of AI tools in development workflows.
         </p>
 
         <ul>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>Node.js</li>
-          <li>Express</li>
+          <li>JavaScript / TypeScript</li>
+          <li>Node.js / Express</li>
+          <li>REST APIs</li>
           <li>SCSS</li>
+          <li>Vite</li>
         </ul>
       </div>
     </section>
@@ -66,39 +68,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         </div>
       </div>
     </section>
-
+    
     <section id="contact" class="contact">
       <div class="container">
         <h2>Contact</h2>
-
-        <form>
-
-          <input
-            type="text"
-            placeholder="Name"
-          >
-
-          <input
-            type="email"
-            placeholder="Email"
-          >
-
-          <input
-            type="tel"
-            placeholder="Phone"
-          >
-
-          <textarea
-            placeholder="Comment"
-          ></textarea>
-
-          <button type="submit">
-            Send
-          </button>
-
-        </form>
+        <div id="contact-root"></div>
       </div>
     </section>
 
   </main>
   `
+  renderContactForm(document.querySelector("#contact-root")!)
