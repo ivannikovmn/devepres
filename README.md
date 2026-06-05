@@ -3,6 +3,23 @@ Developer presentation landing page
 
 ## Setup
 
+### Backend
+```bash
+cd backend
+npm install
+```
+
+### Run backend
+```
+npm run dev
+```
+
+### Backend URL
+
+```text
+http://localhost:3000
+```
+
 ### Frontend
 ```bash
 cd frontend
@@ -22,3 +39,5 @@ http://localhost:5173
 
 ## Stack
 - Vite + TypeScript + SCSS 
+- Node.js + Express (REST API with CORS)
+- TypeScript
