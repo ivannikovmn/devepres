@@ -38,6 +38,8 @@ http://localhost:5173
 ```
 
 ## Stack
-- Vite + TypeScript + SCSS 
+- Vite + TypeScript + SCSS
 - Node.js + Express (REST API with CORS)
+- Nodemailer (SMTP email sending)
+- Dotenv
 - TypeScript
