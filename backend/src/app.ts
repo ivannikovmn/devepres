@@ -1,6 +1,7 @@
 import express from "express"
 import cors from "cors"
 import contactRouter from "./routes/contact"
+import aiSummaryRouter from "./routes/ai-summary";
 
 const app = express()
 
@@ -17,5 +18,7 @@ app.get("/health", (req, res) => {
 })
 
 app.use("/api", contactRouter)
+
+app.use("/api", aiSummaryRouter);
 
 export default app
