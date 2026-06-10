@@ -42,5 +42,5 @@ http://localhost:5173
 - Node.js + Express (REST API with CORS)
 - Nodemailer (SMTP email sending)
 - Dotenv
-- Openai
+- AI endpoint (mock implementation, OpenAI-ready architecture)
 - TypeScript
