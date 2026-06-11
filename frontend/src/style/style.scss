@@ -74,6 +74,44 @@ button {
   padding: 12px;
 }
 
+.ai {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ai-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: vertical;
+  }
+
+  .ai-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .ai-buttons button {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #222;
+    color: #fff;
+    transition: 0.2s;
+  }
+
+  .ai-buttons button:hover {
+    background: #444;
+  }
+}
+
 @media (max-width: 768px) {
 
   section {

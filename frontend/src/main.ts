@@ -1,5 +1,6 @@
 import { renderContactForm } from "./components/contactForm"
 import "./style/style.scss"
+import { generateSummary } from "./api/ai";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main>
@@ -9,6 +10,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <a href="#about">About</a>
       <a href="#work">How I work</a>
       <a href="#projects">Projects</a>
+      <a href="#ai">AI Tools</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -68,6 +70,23 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         </div>
       </div>
     </section>
+
+    <section id="ai" class="ai">
+      <div class="container">
+
+        <h2>AI Tools</h2>
+
+        <textarea id="text" placeholder="Write something..."></textarea>
+
+        <div class="ai-buttons">
+          <button id="summaryBtn">Generate summary</button>
+          <button id="improveBtn">Improve my profile</button>
+        </div>
+
+        <div id="result" class="result"></div>
+
+      </div>
+    </section>    
     
     <section id="contact" class="contact">
       <div class="container">
@@ -79,3 +98,18 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </main>
   `
   renderContactForm(document.querySelector("#contact-root")!)
+  const input = document.querySelector("#text") as HTMLTextAreaElement;
+
+  const summaryBtn = document.querySelector("#summaryBtn") as HTMLButtonElement;
+  const improveBtn = document.querySelector("#improveBtn") as HTMLButtonElement;
+
+  const result = document.querySelector("#result") as HTMLDivElement;
+
+  summaryBtn.addEventListener("click", () => {
+    if (!input.value) return;
+    result.innerText = "Mock summary: " + input.value.split(" ").slice(0, 3).join(" ");
+  });
+
+  improveBtn.addEventListener("click", () => {
+    result.innerText = "Improved version: " + input.value.toUpperCase();
+  });
