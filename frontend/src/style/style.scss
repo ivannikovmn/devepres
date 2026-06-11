@@ -93,10 +93,11 @@ button {
 
   .ai-buttons {
     display: flex;
+    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
   }
-
+  
   .ai-buttons button {
     padding: 10px 14px;
     border-radius: 6px;
@@ -109,6 +110,10 @@ button {
 
   .ai-buttons button:hover {
     background: #444;
+  }
+  
+  .result {
+    text-align: center;
   }
 }
 
