@@ -105,9 +105,20 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
   const result = document.querySelector("#result") as HTMLDivElement;
 
-  summaryBtn.addEventListener("click", () => {
+  summaryBtn.addEventListener("click", async () => {
     if (!input.value) return;
-    result.innerText = "Mock summary: " + input.value.split(" ").slice(0, 3).join(" ");
+  
+    result.innerText = "Loading...";
+  
+    await new Promise((r) => setTimeout(r, 600)); 
+  
+    try {
+      const data = await generateSummary(input.value);
+      result.innerText = data.summary;
+    } catch (e) {
+      result.innerText =
+        "Mock summary: " + input.value.split(" ").slice(0, 3).join(" ");
+    }
   });
 
   improveBtn.addEventListener("click", () => {
