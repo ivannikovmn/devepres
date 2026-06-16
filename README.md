@@ -37,6 +37,10 @@ npm run dev
 http://localhost:5173
 ```
 
+## Demo
+Frontend: https://devepres.vercel.app  
+Backend: https://devepres.onrender.com/health
+
 ## Stack
 - Vite + TypeScript + SCSS
 - Node.js + Express (REST API with CORS)
@@ -44,3 +48,4 @@ http://localhost:5173
 - Dotenv
 - AI endpoint (mock implementation, OpenAI-ready architecture)
 - TypeScript
+- Render + Vercel
