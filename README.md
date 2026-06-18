@@ -44,7 +44,7 @@ Backend: https://devepres.onrender.com/health
 ## Stack
 - Vite + TypeScript + SCSS
 - Node.js + Express (REST API with CORS)
-- Nodemailer (SMTP email sending)
+- Resend Email API
 - Dotenv
 - AI endpoint (mock implementation, OpenAI-ready architecture)
 - TypeScript

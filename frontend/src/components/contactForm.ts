@@ -1,4 +1,4 @@
-import { mockSubmit } from "../api/mockSubmit"
+import { sendContactForm } from "../api/contact"
 
 type FormState = "idle" | "loading" | "success" | "error"
 
@@ -58,7 +58,11 @@ export function renderContactForm(container: HTMLElement) {
   
     try {
       setState("loading")
-      await mockSubmit(data)
+      await sendContactForm({
+        name: data.name,
+        email: data.email,
+        message: data.comment,
+      })     
       setState("success")
       form.reset()
     } catch (e) {
