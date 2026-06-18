@@ -114,10 +114,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   
     try {
       const data = await generateSummary(input.value);
-      result.innerText = data.summary;
-    } catch (e) {
+    
       result.innerText =
-        "Mock summary: " + input.value.split(" ").slice(0, 3).join(" ");
+        (data.summary || input.value)
+          .split(" ")
+          .slice(0, 2)
+          .join(" ") + "...";
+    } catch (e) {
+      console.error("generateSummary failed:", e);
     }
   });
 
